@@ -38,8 +38,8 @@ public class Benutzer {
      */
     public double kalkuliereZeit(){
         double sum=0;
-        for (Sport x :sport) {/*durchlauft seine Liste mit Sportarten*/
-            sum+=x.kalkuliereZeit(); /*fugt zur Summe, die Zeit der Sportart*/
+        for (Sport x :sport) {
+            sum+=x.kalkuliereZeit(); 
         }
         return sum;
     }
@@ -52,9 +52,9 @@ public class Benutzer {
      */
     public double kalkuliereZeit(Sport x){
         double sum=0;
-        for(Sport s:sport) /*durchlauft seine Liste mit Sportarten*/
+        for(Sport s:sport) 
             if(s.getClass()==x.getClass()) /*check welche Objekte aus der Liste die gegebene Sportart sind*/
-                sum+=s.kalkuliereZeit(); /*fugt zur Summe die dauer fur jede Instanz der gegebenen Sportart*/
+                sum+=s.kalkuliereZeit(); 
         return sum;
     }
 
@@ -66,7 +66,6 @@ public class Benutzer {
 
     public double kalkuliereDurchschnittszeit(){
         if (sport.size()>0) /*check ob die Liste Elemente hat*/
-            /*rufen die Methode die die Summe aller Sportarten berechnet und teilen durch ihre Anzahl*/
             return kalkuliereZeit()/sport.size();
         else
             return 0; /*wenn keine Sportart in der Liste existiert*/
